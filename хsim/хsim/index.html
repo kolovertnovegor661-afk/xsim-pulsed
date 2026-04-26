@@ -1,0 +1,51 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>HG Digital — цифровой оператор</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/app.js"></script>
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="logo">HG<span>Digital</span></div>
+      <nav class="nav">
+        <a href="index.html" class="active">Главная</a>
+        <a href="buy.html">Пакеты</a>
+        <a href="dashboard.html">Личный кабинет</a>
+      </nav>
+    </header>
+
+    <section class="card">
+      <h1>Цифровая SIM без оператора</h1>
+      <p class="muted">
+        Получи визуальный номер, протокол и личный кабинет с гигабайтами и минутами.
+        Всё хранится в твоём браузере.
+      </p>
+      <button class="button" onclick="scrollToReg()">Создать цифровую SIM</button>
+    </section>
+
+    <section class="card" id="reg-card">
+      <h2>Визуальная регистрация</h2>
+      <p class="muted">Мы не шлём SMS, всё остаётся локально в твоём браузере.</p>
+      <form id="register-form">
+        <div style="margin-top:12px;">
+          <label>Имя</label><br>
+          <input name="name" required style="width:100%;padding:8px 10px;border-radius:10px;border:1px solid #e5e7eb;margin-top:4px;">
+        </div>
+        <div style="margin-top:12px;">
+          <label>Email (для вида)</label><br>
+          <input name="email" type="email" style="width:100%;padding:8px 10px;border-radius:10px;border:1px solid #e5e7eb;margin-top:4px;">
+        </div>
+        <button type="submit" class="button" style="margin-top:16px;">Создать аккаунт</button>
+      </form>
+      <div id="reg-result" style="margin-top:16px;display:none;">
+        <p class="muted">Аккаунт создан. Теперь можно перейти к покупке пакета.</p>
+        <a href="buy.html" class="button secondary">Перейти к пакетам</a>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

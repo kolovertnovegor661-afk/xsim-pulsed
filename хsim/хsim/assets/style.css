@@ -1,0 +1,108 @@
+/* assets/style.css */
+:root {
+  --accent: #00c8ff;
+  --bg: #f5f7fa;
+  --text: #111827;
+  --muted: #6b7280;
+  --card-bg: #ffffff;
+  --radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+.nav a {
+  margin-left: 16px;
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.nav a.active {
+  color: var(--accent);
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+p.muted {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.button.secondary {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+/* Адаптив под мобилу */
+@media (max-width: 640px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
