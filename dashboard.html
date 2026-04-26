@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Кабинет — HG Digital</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/app.js"></script>
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="logo">HG<span>Digital</span></div>
+      <nav class="nav">
+        <a href="index.html">Главная</a>
+        <a href="buy.html">Тарифы</a>
+        <a href="dashboard.html" class="active">Кабинет</a>
+        <a href="login.html">Админ</a>
+        <button class="icon-btn" id="theme-toggle" title="Сменить тему">🌓</button>
+      </nav>
+    </header>
+
+    <section class="card" id="dash-main"></section>
+
+    <section class="card" id="connect-card">
+      <h2>Подключение профиля</h2>
+      <p class="muted">Форма подключения в стиле VPN. Данные никуда не отправляются.</p>
+      <form id="connect-form" class="connect-form">
+        <div class="field">
+          <label>IMEI</label>
+          <input name="imei" placeholder="Автоподстановка из профиля">
+        </div>
+        <div class="field">
+          <label>PROTO</label>
+          <input name="proto" placeholder="Автоподстановка из профиля">
+        </div>
+        <div class="field">
+          <label>Номер</label>
+          <input name="number" placeholder="Автоподстановка из профиля">
+        </div>
+        <button class="button pulse" type="submit">Подключить</button>
+      </form>
+      <div id="connect-status" class="connect-status hidden">
+        <div class="loader"></div>
+        <p>Идёт подключение...</p>
+      </div>
+    </section>
+
+    <section class="card" id="settings-card">
+      <h2>Настройки</h2>
+      <div class="settings-row">
+        <span>Тема интерфейса</span>
+        <button class="button secondary" id="settings-theme-toggle">Сменить тему</button>
+      </div>
+      <button class="button secondary mt" onclick="logout()">Выйти из аккаунта</button>
+    </section>
+
+    <footer class="footer">
+      <span>Автор: <a href="https://t.me/cwxeaf" target="_blank">@cwxeaf</a></span>
+    </footer>
+  </div>
+</body>
+</html>
